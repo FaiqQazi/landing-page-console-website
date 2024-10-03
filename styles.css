@@ -1,0 +1,265 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #5e4b8b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.service-icon {
+    color: yellow; /* Change icon color to yellow */
+    font-size: 2rem; /* Adjust the size as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.service-icon:hover {
+    color: white; /* Optional hover effect to change color */
+}
+
+
+#hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures video stays behind the content */
+}
+
+#hero h1, #hero button {
+    z-index: 1; /* Keep content above video */
+}
+
+#hero button:hover {
+    background-color: #4a3e70;
+    transform: translateY(-3px);
+}
+
+
+#hero h1 {
+    font-size: 2.5rem; /* Increased font size for prominence */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle text shadow for depth */
+}
+
+#hero button {
+    padding: 12px 24px; /* Adjusted padding for a larger button */
+    background-color: #5e4b8b; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for button */
+}
+
+#hero button:hover {
+    background-color: #4a3e70; /* Darker background on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Optional: Initial Animation for the Hero Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide down effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.theflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+/* Optional: Initial Animation for the Hero Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide down effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.thenav{
+    display: flex;
+    flex-direction: row;
+align-items: center;}
+
+.gaming{
+    color:#ffcc00;
+}
+#hero {
+    animation: fadeIn 0.5s ease-out; /* Fade-in animation for the hero section */
+}
+.circle-logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%; /* This makes it a perfect circle */
+    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+}
+
+#services {
+    padding: 40px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-box {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    background-color: rgba(0, 0, 0, 0.6); /* Dim background image */
+    height: 20rem;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    background-color: rgba(94, 75, 139, 0.9); /* Slight purple tint on hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-box:hover h3 {
+    color: yellow; /* Change text color on hover */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background-color: #5e4b8b; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Centered text */
+    padding: 30px; /* Increased padding */
+    position: relative; /* For animation */
+    overflow: hidden; /* Prevent overflow of pseudo-elements */
+}
+
+footer p {
+    margin-bottom: 10px; /* Space between paragraph and social media links */
+    font-size: 1.2rem; /* Larger font size */
+    animation: fadeIn 0.5s ease; /* Initial fade-in animation */
+}
+
+.social-media {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Centered items */
+    gap: 20px; /* Space between icons */
+}
+
+.social-media a {
+    color: white; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    transition: transform 0.3s, color 0.3s; /* Transition for scaling and color */
+}
+
+.social-media a:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Initial Animation for Footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Slide up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header, footer {
+        padding: 15px;
+    }
+
+
+}
